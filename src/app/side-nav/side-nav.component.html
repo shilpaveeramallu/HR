@@ -1,0 +1,63 @@
+<div class="site-menubar">
+  <div class="site-menubar-body">
+      <div>
+          <div>
+              <ul class="site-menu" data-plugin="menu">
+                  <li class="site-menu-item">
+                      <a class="animsition-link"[routerLink]="['/dashboard']">
+                          <i class="site-menu-icon wb-home"></i>
+                          <span class="site-menu-title">Dashboard</span>
+                      </a>
+                  </li>
+                 
+
+
+                  <li class="site-menu-item has-sub">
+                      <a href="javascript:void(0)" (click)="toggle()">
+                          <i class="site-menu-icon wb-users" aria-hidden="true"></i>
+                    <span class="site-menu-title">Employees </span>
+
+                          <span class="site-menu-arrow"></span>
+                      </a>
+                      <ul class="site-menu-sub" *ngIf="show">
+                          <li class="site-menu-item">
+                              <!-- <a class="animsition-link" [routerLink]="['/add']"> -->
+                                    <a class="animsition-link" [routerLink]="['/add']"> 
+                                  <i class="site-menu-icon " aria-hidden="true"></i>
+                                  <span class="site-menu-title">Add</span>
+                              </a>
+                          </li>
+                          <li class="site-menu-item">
+                              <a class="animsition-link" [routerLink]="['/view']">
+                                  <i class="site-menu-icon " aria-hidden="true"></i>
+                                  <span class="site-menu-title">View</span>
+                              </a>
+                          </li>
+                      </ul>
+                  </li>
+                 
+
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+<div class="toggle" (click)="toggle()" [style.display]="showAddComponent || showViewComponent ? 'block': 'none'"></div>
+
+<div class="side-content3" id="scrollbar" [ngClass]="{'show': showAddComponent, '' : !showAddComponent }">
+  <div class="side-content-info">
+    <app-add [id]="addcomponent" *ngIf="showAddComponent" (closeAddComponent)="closeAddComponent()"></app-add>
+  </div>
+</div>
+
+<div class="side-content4" id="scrollbar" [ngClass]="{'show': showViewComponent, '' : !showViewComponent }">
+  <div class="side-content-info">
+    <app-view [id]="viewcomponent" *ngIf="showViewComponent" (closeViewComponent)="closeViewComponent()" (showLoginForm)="showLoginForm()"></app-view>
+  </div>
+</div> 
+
+

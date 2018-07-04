@@ -1,0 +1,8 @@
+.footer {
+    bottom: 0px;
+    position: fixed;
+    width: 100%;
+}
+span.site-footer-legal {
+    padding: 0px 0px 0px 15%;
+}

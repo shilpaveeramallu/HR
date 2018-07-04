@@ -1,0 +1,106 @@
+/*
+ * Specific styles of signin component
+ */
+/*
+ * General styles
+ */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900');
+body, html {height: 100%;}
+.login-bg{background-repeat: no-repeat;background-color: #0466ad;height: 100%; }
+.card-container.card {max-width: 350px;padding: 40px 40px;}
+.btn {font-weight: 700;height: 36px;-moz-user-select: none;-webkit-user-select: none;user-select: none;cursor: default;}
+input[type=checkbox], input[type=radio] {margin: 1px 0 0;margin-top: 1px\9;line-height: normal;}
+.card {background-color: #F7F7F7;padding: 20px 25px 30px;margin: 0 auto 25px;margin-top: 10%;
+    -moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius: 2px;-moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);}
+.profile-img-card {width: 240px; height: 150px; margin: 0 auto 10px;display: block; -moz-border-radius: 50%;-webkit-border-radius: 50%;text-align: center;}
+.profile-img-card img{    width: 100%;}
+.profile-name-card {font-size: 16px;font-weight: bold;text-align: center;margin: 10px 0 0;min-height: 1em;}
+.reauth-email {display: block;color: #404040; line-height: 2; margin-bottom: 10px;font-size: 14px;text-align: center;overflow: hidden;text-overflow: ellipsis;
+    white-space: nowrap;-moz-box-sizing: border-box; -webkit-box-sizing: border-box;box-sizing: border-box;}
+.form-signin #inputEmail,
+.form-signin #inputPassword {background-color: transparent;border: none;border-bottom: 1px solid #ccc;
+    border-radius: 0;height: 2.1rem;width: 90%;font-family: 'Roboto', sans-serif;font-size: 14px;box-shadow: none;
+    -webkit-box-sizing: content-box;-moz-box-sizing: content-box; box-sizing: content-box;transition: all .3s;margin-top: 20px;margin-bottom: 20px;}
+.form-signin input[type=email],
+.form-signin input[type=password],
+.form-signin input[type=text],
+.form-signin button {
+    width: 100%;display: block;margin-bottom: 10px;z-index: 1;position: relative;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+.form-control{border-radius:0px;}
+/*.form-signin .form-control:focus{border-color:#6891a2;outline:0;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px #6891a2;box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px #6891a2}*/
+.checkbox label,.radio label{min-height:20px;padding-left:20px;margin-bottom:0;cursor:pointer;font-size:12px;color:#757575;font-family:'Roboto',sans-serif}
+
+.btn.btn-signin{padding:0;font-weight:700;font-size:14px;height:36px;-moz-border-radius:0px;-webkit-border-radius:3px;border-radius:0px;border:none;-o-transition:all .218s;-moz-transition:all .218s;-webkit-transition:all .218s;transition:all .218s;margin-top:30px;font-family:'Roboto',sans-serif}.btn.btn-signin:hover,.btn.btn-signin:active,.btn.btn-signin:focus{background-color:#0466ad}.forgot-password{color:#6891a2;font-size:14px;font-family:'Roboto',sans-serif}.forgot-password:hover,.forgot-password:active,.forgot-password:focus{color:#0466ad;text-decoration:none}.fa-sign-in{padding:0 10px}
+
+
+.reg{width:450px !important;}
+
+
+/** Dashboard styles*****/
+.navbar{min-height: 70px;}
+.navbar-fixed-top{top:0;border-width:0 0 1px}
+.navbar-default .navbar-nav #user-profile{height:50px;padding-top:15px;padding-left:58px}
+.navbar-default .navbar-nav #user-profile img{height:45px;width:45px;position:absolute;top:2px;left:8px;padding:1px}
+.navbar-brand {float: left; height: 66px; padding: 22px 15px; font-size: 18px; line-height: 22px;}
+.navbar-brand-logo {width: 50%;}
+.navbar-brand-logo img {width: 50%;margin-top: 12px;}
+#wrapper{padding-top:70px;padding-left:0;-webkit-transition:all .5s ease;-moz-transition:all .5s ease;-o-transition:all .5s ease;transition:all .5s ease}
+@media (min-width: 992px) {
+	#wrapper{padding-left:225px}
+}
+@media (min-width: 992px) {
+	#wrapper #sidebar-wrapper{width:225px}
+}
+#sidebar-wrapper{border-right:1px solid #e7e7e7}
+#sidebar-wrapper{z-index:1000;position:fixed;left:225px;width:0;height:100%;margin-left:-225px;overflow-y:auto;background:#f8f8f8;-webkit-transition:all .5s ease;-moz-transition:all .5s ease;-o-transition:all .5s ease;transition:all .5s ease}
+#sidebar-wrapper .sidebar-nav{position:absolute;top:0;width:225px;font-size:14px;margin:0;padding:0;list-style:none}
+#sidebar-wrapper .sidebar-nav li{text-indent:0;line-height:45px}
+
+#sidebar-wrapper .sidebar-nav li a{display:block;text-decoration:none;    color: #4e4f50;border-bottom: 1px solid #ece5e5;}
+/*.sidebar-nav li:first-child a{background:#0563aa!important;color:#fff!important}*/
+#sidebar-wrapper .sidebar-nav li a .sidebar-icon{width:45px;height:45px;font-size:14px;padding:0 2px;display:inline-block;text-indent:7px;margin-right:10px;float:left;}
+#sidebar-wrapper .sidebar-nav li a .caret{position:absolute;right:23px;top:auto;margin-top:20px}
+#sidebar-wrapper .sidebar-nav li ul.panel-collapse{list-style:none;-moz-padding-start:0;-webkit-padding-start:0;-khtml-padding-start:0;-o-padding-start:0;padding-start:0;padding:0}
+#sidebar-wrapper .sidebar-nav li ul.panel-collapse li i{margin-right:10px}
+#sidebar-wrapper .sidebar-nav li ul.panel-collapse li{text-indent:15px}
+.active {background-color: #0067b1;}
+.active  a{color: #fff !important;}
+
+@media (max-width: 992px) {
+	#wrapper #sidebar-wrapper{width:45px}
+	#wrapper #sidebar-wrapper #sidebar #sidemenu li ul{position:fixed;left:45px;margin-top:-45px;z-index:1000;width:200px;height:0}
+}
+/*.sidebar-nav li:first-child a{background:#92bce0!important;color:#fff!important}
+.sidebar-nav li:nth-child(2) a{background:#6aa3d5!important;color:#fff!important}
+.sidebar-nav li:nth-child(3) a{background:#428bca!important;color:#fff!important}
+.sidebar-nav li:nth-child(4) a{background:#3071a9!important;color:#fff!important}
+.sidebar-nav li:nth-child(5) a{background:#245682!important;color:#fff!important}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

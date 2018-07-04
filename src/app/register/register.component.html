@@ -1,0 +1,26 @@
+<div class="container">
+        <div class="card card-container">
+            
+            <div id="profile-img" class="profile-img-card">
+            	<img  src="images/brand-logo2.png" />
+            </div>
+            <p id="profile-name" class="profile-name-card"></p>
+			<p class='error_msg' id='error_msg'></p>
+            <form method="Submit" class="form-signin" action="">
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="text" name="company_name" id="inputEmail" class="form-control" placeholder="First Name"  autofocus>
+                <input type="text" name="company_lname" id="inputEmail" class="form-control" placeholder="Last Name" >
+                <input type="email" name="company_email" id="inputEmail" class="form-control" placeholder="Email address"  autofocus>
+                <input type="password" name="company_password" id="inputPassword" class="form-control" placeholder="Password" >
+                <input type="password" name="company_password" id="inputPassword" class="form-control" placeholder="Confirm Password" >
+              <a (click)="redirectToSignUp()" id="SignIn">Sign Up</a>
+            </form>
+
+                <a class="btn btn-sm btn-inverse btn-round" [routerLink]="['/forgotpassword']">
+               <i class="fa fa-sign-in" aria-hidden="true"></i> Sign In </a>
+           
+        </div><!-- /card-container -->
+      
+    </div><!-- /container -->
+
+     

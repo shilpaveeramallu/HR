@@ -1,0 +1,28 @@
+<div class="container">
+         <div class="card card-container">
+            <div id="profile-img" class="profile-img-card">
+            	<img  src="images/brand-logo2.png" />
+            </div>
+            <p id="profile-name" class="profile-name-card"></p>
+			<p class='error_msg' id='error_msg'></p>
+            <form method="Submit" class="form-signin" action="">
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="email" name="company_email" id="inputEmail" class="form-control" placeholder="Email address"  autofocus>
+                <input type="password" name="company_password" id="inputPassword" class="form-control" placeholder="Password" >
+                <div id="remember" class="checkbox">
+                   <!-- <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>-->
+                </div>
+
+			  <input type='submit' name='submit' value='Sign In' class="btn btn-lg btn-primary btn-block btn-signin">
+			</form><!-- /form --></br>
+          <!--  <a href="forgotpassword.html" class="forgot-password">-->
+                <a class="animsition-link" [routerLink]="['/forgotpassword']">
+               <i class="fa fa-lock" aria-hidden="true"></i> Forgot the password?
+            </a>
+           
+        </div><!-- /card-container -->
+      
+    </div><!-- /container -->
+     <div class="clearfix"></div>

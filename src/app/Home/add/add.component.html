@@ -1,0 +1,315 @@
+<div class="page animsition" style="animation-duration: 0s; opacity: 1;">
+        <div class="page-header">
+            <h1 class="page-title">Add Employee Details </h1>
+            <div class="page-header-actions">
+                  <!--  <a class="animsition-link" href="view_employee.html">-->
+                <a class="btn btn-sm btn-inverse btn-round" [routerLink]="['/view']" href="view_employee.html">
+                    <i class="icon wb-eye" aria-hidden="true"></i>
+                    <span class="hidden-sm-down">View Employee Details</span>
+                </a>
+            </div>
+        </div>
+
+    <div class="page-content">
+        <div class="panel">
+            <div class="panel-body">
+                <div class="col-md-12 col-lg-6">
+                   
+                    <div class="example-wrap">    
+                            <form [formGroup]="_employeeAddForm" class="form-horizontal" (ngSubmit)="onSave()">
+   
+                              <div class="form-group row has-feedback">
+                                    <label class="col-md-3 form-control-label control-label" for="ClientDate">Date Of Join</label>
+                                    <div class="col-md-9">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="icon wb-calendar" aria-hidden="true"></i></span>
+                                            <input type="date" class="form-control datepickerstdt" [(ngModel)]="dateofJoin" autocomplete='off' [ngClass]="{'validate': showRequiredFieldError('dateofJoin') }"
+                                                id="dateofJoin" formControlName="dateofJoin" data-plugin="datepicker">
+                                        </div>
+                                        <em *ngIf="showRequiredFieldError('dateofJoin')">Date of Join is required</em> 
+                                    </div>
+                                </div>
+                          <!--      <div class="form-group row has-feedback">
+                                    <label class="col-md-3 form-control-label control-label" for="dateofJoin">Date of Join</label>
+                                     <div class="col-md-9">
+                                         <div class="md-form">
+                                             <mat-form-field>
+                                                 <input matInput [matDatepicker]="picker" placeholder=""[(ngModel)]=" dateofJoin" [ngClass]="{'validate': showRequiredFieldError('dateofJoin') }"
+                                                 formControlName="dateofJoin">
+                                                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                                 <mat-datepicker #picker></mat-datepicker>
+                                               </mat-form-field>
+                                               
+                                             <em *ngIf="showRequiredFieldError('dateofJoin')">Date of Join is required</em>
+                                         </div>
+                 
+                                     </div>
+                                 </div>-->
+                                  
+                                        <div class="form-group row has-feedback">
+                                                <label class="col-md-3 form-control-label control-label" for="employeeId">Employee ID</label>
+                                                <div class="col-md-9">
+                                                    <div class="md-form">
+                                                        <input type="text" id="employeeId" class="form-control" placeholder="Enter Employee ID" [ngClass]="{'validate': showRequiredFieldError('employeeId') }"
+                                                            formControlName="employeeId">
+                                                        <em *ngIf="showRequiredFieldError('employeeId')">Employee ID is required</em>
+                                                    </div>
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                        
+        
+                                    <div class="form-group row has-feedback">
+                                        <label class="col-md-3 form-control-label control-label" for="firstName">First Name</label>
+                                        <div class="col-md-9">
+                                            <div class="md-form">
+                                                <input type="text" id="firstName" class="form-control" placeholder="Enter First Name" [ngClass]="{'validate': showRequiredFieldError('firstName') }"
+                                                    formControlName="firstName">
+                                                <em *ngIf="showRequiredFieldError('firstName')">First Name is required</em>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row has-feedback">
+                                        <label class="col-md-3 form-control-label control-label" for="lastName">Last Name</label>
+                                        <div class="col-md-9">
+                                            <div class="md-form">
+                                                <input type="text" id="lastName" class="form-control" placeholder="Enter Last Name" [ngClass]="{'validate': showRequiredFieldError('lastName') }"
+                                                    formControlName="lastName">
+                                                <em *ngIf="showRequiredFieldError('lastName')">Last Name is required</em>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="form-group row has-feedback">
+                                        <label class="col-md-3 form-control-label control-label" for="fullName">Full Name</label>
+                                        <div class="col-md-9">
+                                            <div class="md-form">
+                                                <input type="text" id="fullName" class="form-control" placeholder="Enter Full Name" [ngClass]="{'validate': showRequiredFieldError('fullName') }"
+                                                    formControlName="fullName">
+                                                <em *ngIf="showRequiredFieldError('fullName')">Full Name is required</em>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+                                  <!--  <div class="form-group row has-feedback">
+                                        <label class="col-md-3 form-control-label control-label" for="dateofBirth">Date of Join</label>
+                                         <div class="col-md-9">
+                                             <div class="md-form">
+                                                 <mat-form-field>
+                                                     <input matInput [matDatepicker]="picker2" placeholder="" [(ngModel)]=" dateofBirth" type="text"[ngClass]="{'validate': showRequiredFieldError('dateofBirth') }"
+                                                     formControlName="dateofBirth">
+                                                     <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                                                     <mat-datepicker #picker2></mat-datepicker>
+                                                   </mat-form-field>
+                                                   
+                                                 <em *ngIf="showRequiredFieldError('dateofJoin')">Date of Join is required</em>
+                                             </div>
+                     
+                                         </div>
+                                     </div> -->   
+                                     <div class="form-group row has-feedback">
+                                        <label class="col-md-3 form-control-label control-label" for="ClientDate">Date Of Birth</label>
+                                        <div class="col-md-9">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="icon wb-calendar" aria-hidden="true"></i></span>
+                                                <input type="date" class="form-control datepickerstdt" [(ngModel)]="dateofBirth" autocomplete='off' [ngClass]="{'validate': showRequiredFieldError('dateofBirth') }"
+                                                    id="dateofBirth" formControlName="dateofBirth" data-plugin="datepicker">
+                                            </div>
+                                            <em *ngIf="showRequiredFieldError('dateofJoin')">Date of Join is required</em> 
+                                        </div>
+                                    </div> 
+                                    <div class="form-group row has-feedback ">
+                                        <label class="col-md-3 form-control-label control-label" for="gender">Gender*</label>
+                                        <div class="offset-md-9 col-md-9">
+                                            <div class="col-md-4 radio-custom radio-primary">
+                                                <input type="radio" formControlName="gender" value='Male'>
+                                                <label for="gender">For Male</label>
+                                            </div>
+                                            <div class="col-md-4 radio-custom radio-primary">
+                                                <input type="radio" formControlName="gender" value='Female'>
+                                                <label for="gender">For Female</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row has-feedback">
+                                            <label class="col-md-3 form-control-label control-label" for="Email">Email*</label>
+                                            <div class="col-md-9">
+                                                <input type="text" data-error="Please Enter Email" class="form-control" name="emp_email" id="emp_email"  placeholder="Enter Email" value="" required />
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                        <div id="email_error">
+                                        </div>
+                                
+                                    <div class="form-group row has-feedback">
+                                        <label class="col-md-3 form-control-label control-label" for="mobile">Mobile*</label>
+                                        <div class="col-md-9">
+                                            <div class="md-form">
+                                                <input type="text" id="mobile" class="form-control" placeholder="Enter Mobile" [ngClass]="{'validate': showRequiredFieldError('mobile') }"
+                                                    formControlName="mobile">
+                                                <em *ngIf="showRequiredFieldError('mobile')">A Valid Mobile Number is required</em>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="form-group row has-feedback">
+                                        <label class="col-md-3 form-control-label control-label" for="emergencyNumber">Emergency Number*</label>
+                                        <div class="col-md-9">
+                                            <div class="md-form">
+                                                <input type="text" id="emergencyNumber" class="form-control" placeholder="Enter Emergency Number" [ngClass]="{'validate': showRequiredFieldError('emergencyNumber') }"
+                                                    formControlName="emergencyNumber">
+                                                <em *ngIf="showRequiredFieldError('emergencyNumber')">Emergency Number is required</em>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="form-group row has-feedback">
+                                        <label class="col-md-3 form-control-label control-label" for="pancardNumber">Pancard Number</label>
+                                        <div class="col-md-9">
+                                            <div class="md-form">
+                                                <input type="text" id="pancardNumber" class="form-control" placeholder="Enter Pancard Number" [ngClass]="{'validate': showRequiredFieldError('pancardNumber') }"
+                                                    formControlName="pancardNumber">
+                                                <em *ngIf="showRequiredFieldError('pancardNumber')">Pancard Number is required</em>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="form-group row has-feedback">
+                                        <label class="col-md-3 form-control-label control-label" for="uploadProfileImage">Upload Profile Image*</label>
+                                        <div class="col-md-9">
+                                            <div class="md-form">
+                                                <input type="file" id="uploadProfileImage" class="form-control" (change)="onFileChange($event)" #fileInput [ngClass]="{'validate': showRequiredFieldError('uploadProfileImage') }"
+                                                    formControlName="uploadProfileImage">
+                                                <em *ngIf="showRequiredFieldError('uploadProfileImage')">Upload Profile Image is required</em>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="form-group row has-feedback">
+                                        <label class="col-md-3 form-control-label control-label" for="aboutEmployee">About Employee*</label>
+                                        <div class="col-md-9">
+                                            <div class="md-form">
+                                                <textarea id="aboutEmployee" class="form-control" [ngClass]="{'validate': showRequiredFieldError('aboutEmployee') }" formControlName="aboutEmployee"></textarea>
+                                                <em *ngIf="showRequiredFieldError('aboutEmployee')">About Employee is required</em>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="form-group row has-feedback">
+                                        <label class="col-md-3 form-control-label control-label" for="profileSummary">Profile Summary*</label>
+                                        <div class="col-md-9">
+                                            <div class="md-form">
+                                                <textarea id="profileSummary" class="form-control" [ngClass]="{'validate': showRequiredFieldError('profileSummary') }" formControlName="profileSummary"></textarea>
+                                                <em *ngIf="showRequiredFieldError('profileSummary')">Profile Summary is required</em>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row has-feedback">
+                                        <label class="col-md-3 form-control-label control-label" for="designation">Designation*</label>
+                                        <div class="col-md-9">
+                                            <div class="md-form">
+                                                <select class="form-control" id="designation" [ngClass]="{'validate': showRequiredFieldError('designation') }" formControlName="designation">
+                                                    <option value="">Select Designation</option>
+                                                    <option *ngFor="let dlist of deslist" [value]="dlist">{{dlist}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="form-group row has-feedback">
+                                        <label class="col-md-3 form-control-label control-label" for="bandName">Band Name*</label>
+                                        <div class="col-md-9">
+                                            <div class="md-form">
+                                                <select class="form-control" id="bandName" [ngClass]="{'validate': showRequiredFieldError('bandName') }" formControlName="bandName">
+                                                    <option value="">Select Band Name</option>
+                                                    <option *ngFor="let blist of bandlist" [value]="blist">{{blist}}</option>
+                                                </select>
+                                                <em *ngIf="showRequiredFieldError('bandName')">Band Name is required</em>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="form-group row has-feedback">
+                                        <label class="col-md-3 form-control-label control-label" for="primarySkills">Primary Skills*</label>
+                                        <div class="col-md-9">
+                                            <div class="md-form">
+                                                <select class="form-control" id="primarySkills" [ngClass]="{'validate': showRequiredFieldError('primarySkills') }" formControlName="primarySkills">
+                                                    <option value=""> Select Primary Skills</option>
+                                                    <option *ngFor="let plist of primarylist" [value]="plist">{{plist}}</option>
+                                                </select>
+                                                <em *ngIf="showRequiredFieldError('primarySkills')">Primary Skills is required</em>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                           <!--    <div class="form-group row has-feedback">
+                                        <label class="col-md-3 form-control-label control-label" for="secondarySkills">Secondary Skills*</label>
+                                        <div class="col-md-9">
+                                            <div class="md-form">
+                                                    <select class="form-control select2-multiple border employee_reports" name="secondaryskills[]" multiple='multiple' data-error="Please Select Secondary Skills" id="" required>
+                                                    
+                                                    <option value="">Select Secondary Skills</option>
+                                                    <option *ngFor="let slist of secondarylist" [value]="slist">{{slist}}</option>
+                                                </select>
+                                
+                                                <em *ngIf="showRequiredFieldError('secondarySkills')">Secondary Skills is required</em>
+                                            </div>
+                                        </div>
+                                    </div>-->
+                                    <div class="form-group row has-feedback">
+                                            <label class="col-md-3 form-control-label control-label" for="secondarySkills">Secondary Skills*</label>
+                                            <div class="col-md-9">
+                                                <div class="md-form">
+                                                    <angular2-multiselect [data]="secondarySkills" [(ngModel)]="selectedItems"  
+                                                    [settings]="dropdownSettings" 
+                                                    (onSelect)="onItemSelect($event)"
+                                                    (onDeSelect)="OnItemDeSelect($event)" 
+                                                    (onSelectAll)="onSelectAll($event)" 
+                                                    (onDeSelectAll)="onDeSelectAll($event)" [ngClass]="{'validate': showRequiredFieldError('secondarySkills') }" formControlName="secondarySkills">
+                                                    </angular2-multiselect>
+                                                    <em *ngIf="showRequiredFieldError('secondarySkills')">Secondary Skills is required</em>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    
+
+                                        
+
+                                    
+                                    <div class="form-group row has-feedback">
+                                        <label class="col-md-3 form-control-label control-label" for="presentAddress">Present Address*</label>
+                                        <div class="col-md-9">
+                                            <div class="md-form">
+                                                <textarea id="presentAddress" class="form-control" [ngClass]="{'validate': showRequiredFieldError('presentAddress') }" formControlName="presentAddress"></textarea>
+                                                <em *ngIf="showRequiredFieldError('presentAddress')">Present Address is required</em>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="form-group row has-feedback">
+                                        <label class="col-md-3 form-control-label control-label" for="permanentAddress">Permanent Address*</label>
+                                        <div class="col-md-9">
+                                            <div class="md-form">
+                                                <textarea id="permanentAddress" class="form-control" [ngClass]="{'validate': showRequiredFieldError('permanentAddress') }"
+                                                    formControlName="permanentAddress"></textarea>
+                                                <em *ngIf="showRequiredFieldError('permanentAddress')">Permanent Address is required</em>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div>
+                                        <div class="col-md-9 offset-md-3 col-md-offset-5">
+                                            <button type="submit" name='save_client' class="btn btn-primary enabled">Save</button>&nbsp;
+                                
+                                            <button type="button" (click)="redirect()" class="btn btn-default btn-outline">Back</button>
+                                        </div>
+                                    </div>
+                                
+                                </form>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="page animsition" style="animation-duration: 0s; opacity: 1;">
+        <div class="page-header">
+            <h1 class="page-title">View </h1>
+            <div class="page-header-actions">
+                <a class="btn btn-sm btn-inverse btn-round" [routerLink]="['/add']" href="add_employee.html">
+                    <i class="icon wb-plus-circle" aria-hidden="true"></i>
+                    <span class="hidden-sm-down">Add</span>
+                </a>
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="panel">
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <div class="nav-tabs-horizontal nav-tabs-inverse">
+                            <div class="tab-content padding-20">
+                                <div class="tab-pane active" id="exampleTabsInverseOne" role="tabpanel">
+                                    <table id="example" class="table table-striped table-bordered " cellspacing="0" >
+                                        <thead>
+                                            <tr class="bg-blue-grey-100">
+                                                <th>S.No</th>
+                                                <th>Employee Code</th>
+                                                <th>Full Name</th>
+                                                <th>Joined Date</th>
+                                                <th>Designation</th>
+                                                <th>Band Name</th>
+                                                <th>Email</th>
+                                                <th>Mobile</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr *ngFor="let emp of employees">
+                                                  <td>{{ emp._id }}</td>  
+                                                  <td>{{ emp.employeeId }}</td>
+                                                  <td>{{ emp.fullName }}</td>
+                                                  <td>{{ emp.dateofJoin }}</td>
+                                                  <td>{{ emp.designation }}</td>
+                                                  <td>{{ emp.bandName }}</td>
+                                                  <td>{{ emp.dateofJoin }}</td>
+                                                  <td>{{ emp.designation }}</td>
+                                                  <td>{{ emp.bandName }}</td>
+                                                  <td>
+                                                    <a [routerLink]="['/edit']">
+                                                    <button type="button" (click)="loadArticleToEdit(article.id)">Edit</button></a>&nbsp; 
+                                                    <button type="button" (click)="deleteArticle(article.id)">Delete</button>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+                                     
